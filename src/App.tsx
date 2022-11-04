@@ -1,13 +1,18 @@
-import React from 'react';
-import Father from './component/Father';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
+  const [state, setState] = useState(0);
+  const handleClick = () => {
+    debugger
+    setState(prev => prev + 1);
+   }
   return (
-    <div className="App">
-      <Father />
-    </div>
+    <>
+      <button onClick={handleClick}>Update</button>
+    </>
+      
   );
 }
 
